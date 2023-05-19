@@ -60,8 +60,13 @@
 	  e.preventDefault();
 	  const x = e.pageX - slider.offsetLeft;
 	  const walk = (startX - x) * 3; //scroll-fast
-	  slider.scrollLeft =  walk - scrollLeft;
-	  console.log(walk);
+		if(walk<=0){
+			return;
+		}else{
+			
+		  slider.scrollLeft =  walk - scrollLeft;
+		  console.log(walk);
+		}
 	});
 </script>
 
