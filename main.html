@@ -59,14 +59,9 @@
 	  if(!isDown) return;
 	  e.preventDefault();
 	  const x = e.pageX - slider.offsetLeft;
-	  const walk = (startX - x) * 3; //scroll-fast
-		if(walk<=0){
-			return;
-		}else{
-			
-		  slider.scrollLeft =  walk - scrollLeft;
-		  console.log(walk);
-		}
+	  const walk = (x - startX) * 3; //scroll-fast
+	  slider.scrollLeft = scrollLeft - walk;
+	  console.log(walk);
 	});
 </script>
 
